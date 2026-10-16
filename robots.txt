@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://la-cocina-de-dos.vercel.app/sitemap.xml
