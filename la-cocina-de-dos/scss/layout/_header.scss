@@ -1,0 +1,40 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/placeholders";
+
+// Encabezado de las páginas internas
+.encabezado-pagina {
+  @include seccion($espacio-lg);
+  background-color: $color-ambar;
+  text-align: center;
+
+  h1 {
+    margin-bottom: $espacio-xs;
+  }
+
+  p {
+    max-width: 40rem;
+    margin-inline: auto;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+
+  @include respond-up($bp-desktop) {
+    @include seccion($espacio-xl);
+  }
+}
+
+.migas {
+  @extend %reset-lista;
+  display: flex;
+  justify-content: center;
+  gap: $espacio-xs;
+  margin-bottom: $espacio-sm;
+  font-size: .9rem;
+  font-weight: 700;
+
+  li + li::before {
+    content: "›";
+    margin-right: $espacio-xs;
+  }
+}

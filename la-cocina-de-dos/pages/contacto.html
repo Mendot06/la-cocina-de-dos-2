@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y pedidos por WhatsApp | La Cocina de Dos</title>
+    <meta name="description" content="Hacé tu pedido de tartas y sanguches caseros. Completá el formulario y te respondemos por WhatsApp para coordinar la entrega.">
+    <meta name="keywords" content="pedidos por whatsapp, contacto, encargar tartas, encargar sanguches, hacer un pedido">
+    <meta name="author" content="La Cocina de Dos">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://la-cocina-de-dos.vercel.app/pages/contacto.html">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon-la-cocina-de-dos.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-cocina" aria-label="Navegación principal">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/img/logo-la-cocina-de-dos.svg" alt="Logo de La Cocina de Dos" width="40" height="40">
+            <span>La Cocina de Dos</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir o cerrar el menú de navegación">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu-principal">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tartas.html">Tartas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sanguches.html">Sanguches</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="encabezado-pagina" aria-labelledby="titulo-pagina">
+        <div class="container">
+          <ol class="migas" aria-label="Ruta de navegación">
+            <li><a href="../index.html">Inicio</a></li>
+            <li aria-current="page">Contacto</li>
+          </ol>
+          <h1 id="titulo-pagina">Hacé tu pedido</h1>
+          <p>Completá el formulario y te respondemos por WhatsApp para coordinar todo.</p>
+        </div>
+      </section>
+
+      <section class="seccion" aria-label="Datos de contacto y formulario de pedido">
+        <div class="container">
+          <div class="contacto">
+            <aside class="contacto__datos" data-aos="fade-up">
+              <h2 class="h4">Datos de contacto</h2>
+              <ul>
+                <li><strong>WhatsApp:</strong><br><a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">+54 9 11 0000-0000</a></li>
+                <li><strong>Horarios:</strong><br>A coordinar por mensaje</li>
+                <li><strong>Entrega:</strong><br>Consultanos por tu zona</li>
+              </ul>
+              <a class="btn btn-cocina btn-cocina--claro" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+            </aside>
+            <div class="contacto__formulario" data-aos="fade-up" data-aos-delay="100">
+              <form class="formulario-pedido" id="formulario-pedido" action="#" method="get">
+                <div class="row g-3">
+                  <div class="col-12 col-md-8">
+                    <label class="form-label" for="nombre">Tu nombre</label>
+                    <input class="form-control" type="text" id="nombre" name="nombre" autocomplete="name" required>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <label class="form-label" for="cantidad">Cantidad</label>
+                    <input class="form-control" type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="producto">Qué querés pedir</label>
+                    <select class="form-select" id="producto" name="producto" required>
+                    <option value="tarta-de-verdura">Tarta de verdura</option>
+                    <option value="tarta-de-jamon-y-queso">Tarta de jamón y queso</option>
+                    <option value="tarta-de-pollo-y-puerro">Tarta de pollo y puerro</option>
+                    <option value="sanguches-de-jamon-y-queso">Sanguches de jamón y queso</option>
+                    <option value="sanguches-de-salame-y-queso">Sanguches de salame y queso</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="mensaje">Mensaje (opcional)</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-cocina" type="submit">Enviar pedido por WhatsApp</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="container">
+        <div class="pie__grilla">
+          <section>
+            <h2>La Cocina de Dos</h2>
+            <p>Tartas y sanguches caseros, cocinados por mamá y por mí. Un emprendimiento familiar hecho con cariño.</p>
+          </section>
+          <nav aria-label="Enlaces del pie de página">
+            <h2>Navegá</h2>
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="tartas.html">Tartas</a></li>
+              <li><a href="sanguches.html">Sanguches</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+          <section>
+            <h2>Pedidos</h2>
+            <address>
+              <p>WhatsApp: <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">+54 9 11 0000-0000</a></p>
+              <p>Horarios: a coordinar por mensaje</p>
+            </address>
+          </section>
+        </div>
+        <p class="pie__legal">© 2026 La Cocina de Dos. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <a class="boton-flotante" href="https://wa.me/5491100000000?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Hacer un pedido por WhatsApp">
+      <span aria-hidden="true">💬</span> Pedir
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  font-family: $fuente-base;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $color-cacao;
+  background-color: $color-crema;
+  overflow-x: clip;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Orden LVHA: link, visited, hover, focus, active
+a {
+  color: $color-cacao;
+  text-decoration-color: $color-horneado;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .25em;
+  @include transicion(all);
+
+  &:link {
+    color: $color-cacao;
+  }
+
+  &:visited {
+    color: $color-cacao-suave;
+  }
+
+  &:hover {
+    text-decoration-thickness: 4px;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-cacao;
+    outline-offset: 3px;
+    border-radius: .25rem;
+  }
+
+  &:active {
+    color: $color-horneado;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  z-index: 2000;
+  padding: .5rem 1rem;
+  background-color: $color-cacao;
+  color: $color-crema;
+  border-radius: $radio-borde;
+
+  &:link,
+  &:visited {
+    color: $color-crema;
+  }
+
+  &:focus {
+    top: 1rem;
+  }
+}

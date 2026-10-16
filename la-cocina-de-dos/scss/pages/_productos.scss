@@ -1,0 +1,77 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/placeholders";
+
+// Filas de producto: grid-template-areas, alternadas con :nth-child
+.fila-producto {
+  display: grid;
+  gap: $espacio-md;
+  align-items: center;
+  margin-bottom: $espacio-lg;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "imagen" "contenido";
+
+  &__imagen {
+    grid-area: imagen;
+    margin: 0;
+    @include tarjeta();
+    border: 4px solid $color-cacao;
+
+    img {
+      @extend %imagen-fluida;
+      @include transicion(transform, .5s);
+    }
+
+    &:hover img {
+      transform: scale(1.04);
+    }
+  }
+
+  &__contenido {
+    grid-area: contenido;
+
+    h2 {
+      margin-bottom: $espacio-xs;
+    }
+  }
+
+  &__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $espacio-sm;
+  }
+
+  @include respond-up($bp-desktop) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "imagen contenido";
+    gap: $espacio-lg;
+
+    &:nth-child(even) {
+      grid-template-areas: "contenido imagen";
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.combos {
+  @extend %reset-lista;
+  @include grid-auto(16rem, $espacio-sm);
+
+  li {
+    @extend %tarjeta-base;
+    font-weight: 700;
+    @include transicion(all);
+
+    &:hover {
+      transform: translateY(-.3rem);
+      box-shadow: $sombra-fuerte;
+    }
+  }
+
+  li:nth-child(odd) {
+    background-color: $color-miel;
+  }
+}

@@ -1,0 +1,89 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Navbar de Bootstrap estilada con la identidad de la marca
+.navbar-cocina {
+  background-color: $color-miel;
+  box-shadow: $sombra-suave;
+  padding-block: $espacio-xs;
+
+  .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: $espacio-xs;
+    margin-right: 0;
+    font-family: $fuente-titulos;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $color-cacao;
+
+    &:link,
+    &:visited,
+    &:hover {
+      color: $color-cacao;
+      text-decoration: none;
+    }
+
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  .navbar-toggler {
+    border: 2px solid $color-cacao;
+    @include transicion(all);
+
+    &:hover {
+      background-color: $color-ambar;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 .2rem rgba($color-cacao, .4);
+    }
+
+    &:active {
+      background-color: $color-caramelo;
+    }
+  }
+
+  .navbar-nav {
+    gap: .25rem;
+    padding-block: $espacio-xs;
+  }
+
+  .nav-link {
+    padding: .6rem 1rem;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: $radio-pill;
+    @include transicion(all);
+
+    &:link,
+    &:visited {
+      color: $color-cacao;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-ambar;
+      color: $color-cacao;
+      text-decoration: none;
+    }
+
+    &:active {
+      background-color: $color-caramelo;
+    }
+
+    &.active {
+      background-color: $color-cacao;
+      color: $color-crema;
+    }
+  }
+
+  @include respond-up($bp-desktop) {
+    .navbar-nav {
+      padding-block: 0;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Logo de La Cocina de Dos">
+<title>Logo de La Cocina de Dos</title>
+<circle cx="32" cy="32" r="30" fill="#DA8120" stroke="#2B1B0A" stroke-width="3"/>
+<circle cx="32" cy="32" r="20" fill="#EBB458" stroke="#2B1B0A" stroke-width="2"/>
+<circle cx="32" cy="32" r="13" fill="#F6B82E"/>
+<path d="M32 19 L32 45 M19 32 L45 32 M23 23 L41 41 M41 23 L23 41" stroke="#2B1B0A" stroke-width="1.5" opacity=".5"/>
+</svg>

@@ -1,0 +1,35 @@
+// Paleta de la marca (pedida por el cliente)
+$color-miel: #F6B82E;
+$color-ambar: #EBB458;
+$color-mostaza: #DEB20D;
+$color-caramelo: #D79A33;
+$color-horneado: #DA8120;
+
+// Neutros para lograr buen contraste de texto (accesibilidad)
+$color-cacao: #2B1B0A;
+$color-cacao-suave: #5A3E17;
+$color-crema: #FFF8E7;
+$color-blanco: #FFFFFF;
+
+// Tipografías
+$fuente-titulos: 'Fraunces', Georgia, 'Times New Roman', serif;
+$fuente-base: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// Espaciados
+$espacio-xs: .5rem;
+$espacio-sm: 1rem;
+$espacio-md: 1.5rem;
+$espacio-lg: 3rem;
+$espacio-xl: 5rem;
+
+// Bordes, sombras y tiempos
+$radio-borde: 1rem;
+$radio-pill: 50rem;
+$sombra-suave: 0 .5rem 1.5rem rgba($color-cacao, .15);
+$sombra-fuerte: 0 1rem 2rem rgba($color-cacao, .25);
+$duracion: .3s;
+
+// Breakpoints (mobile-first, min-width)
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1440px;

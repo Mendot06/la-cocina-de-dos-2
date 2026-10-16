@@ -1,0 +1,56 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $fuente-titulos;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-cacao;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 7vw, 3.25rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-block: 0 $espacio-sm;
+}
+
+.lead {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: $espacio-xs;
+  padding: .25rem .9rem;
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background-color: $color-cacao;
+  color: $color-miel;
+  border-radius: $radio-pill;
+}
+
+.texto-suave {
+  color: $color-cacao-suave;
+}
+
+@include respond-up($bp-tablet) {
+  .lead {
+    font-size: 1.3rem;
+  }
+}

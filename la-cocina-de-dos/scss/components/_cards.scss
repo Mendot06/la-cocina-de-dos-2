@@ -1,0 +1,66 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/placeholders";
+
+// Tarjeta de producto (transición + transform en hover)
+.tarjeta-producto {
+  @include tarjeta();
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @include transicion(all);
+
+  &:hover {
+    transform: translateY(-.5rem);
+    box-shadow: $sombra-fuerte;
+  }
+
+  &__imagen {
+    margin: 0;
+    overflow: hidden;
+    background-color: $color-miel;
+
+    img {
+      @extend %imagen-fluida;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      @include transicion(transform, .5s);
+    }
+  }
+
+  &:hover &__imagen img {
+    transform: scale(1.06);
+  }
+
+  &__cuerpo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: $espacio-md;
+
+    p {
+      flex: 1;
+    }
+  }
+}
+
+.tarjeta-valor {
+  @extend %tarjeta-base;
+  text-align: center;
+  @include transicion(all);
+
+  &:hover {
+    transform: translateY(-.35rem);
+    box-shadow: $sombra-fuerte;
+  }
+
+  &__icono {
+    @include flex-center();
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto $espacio-sm;
+    font-size: 1.9rem;
+    background-color: $color-miel;
+    border-radius: 50%;
+  }
+}

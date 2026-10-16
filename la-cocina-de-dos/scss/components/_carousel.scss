@@ -1,0 +1,83 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Carousel de Bootstrap con la identidad de la marca
+.galeria {
+  max-width: 50rem;
+  margin-inline: auto;
+  @include tarjeta($radio-borde, $color-cacao);
+
+  .carousel-item img {
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+    background-color: $color-miel;
+
+    @include respond-up($bp-tablet) {
+      height: 24rem;
+    }
+
+    @include respond-up($bp-desktop) {
+      height: 30rem;
+    }
+  }
+
+  .carousel-caption {
+    position: static;
+    padding: $espacio-sm $espacio-md;
+    background-color: $color-cacao;
+    color: $color-crema;
+    text-align: center;
+
+    h3 {
+      margin-bottom: .25rem;
+      font-size: 1.2rem;
+      color: $color-miel;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .carousel-indicators {
+    position: static;
+    margin: 0;
+    padding: $espacio-xs 0 $espacio-sm;
+    background-color: $color-cacao;
+
+    [data-bs-target] {
+      width: .8rem;
+      height: .8rem;
+      border: 0;
+      border-radius: 50%;
+      background-color: $color-ambar;
+      opacity: .5;
+    }
+
+    .active {
+      background-color: $color-miel;
+      opacity: 1;
+    }
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: rgba($color-cacao, .75);
+    background-size: 50%;
+    border-radius: 50%;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    bottom: 5.5rem;
+    width: 15%;
+    @include transicion(opacity);
+
+    &:focus-visible {
+      outline: 3px solid $color-miel;
+    }
+  }
+}

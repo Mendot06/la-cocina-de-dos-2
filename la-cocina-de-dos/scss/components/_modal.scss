@@ -1,0 +1,33 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.modal-cocina {
+  .modal-content {
+    border: 3px solid $color-cacao;
+    border-radius: $radio-borde;
+    background-color: $color-crema;
+  }
+
+  .modal-header {
+    background-color: $color-miel;
+    border-bottom: 2px solid $color-cacao;
+  }
+
+  .modal-title {
+    font-family: $fuente-titulos;
+    font-weight: 700;
+  }
+
+  .btn-close:focus {
+    box-shadow: 0 0 0 .2rem rgba($color-cacao, .5);
+  }
+
+  ol {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-bottom: $espacio-xs;
+  }
+}

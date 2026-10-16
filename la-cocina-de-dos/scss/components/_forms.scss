@@ -1,0 +1,29 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.formulario-pedido {
+  @include tarjeta($radio-borde, $color-blanco);
+  padding: $espacio-md;
+
+  .form-label {
+    font-weight: 800;
+  }
+
+  .form-control,
+  .form-select {
+    border: 2px solid $color-caramelo;
+    border-radius: .75rem;
+    color: $color-cacao;
+    background-color: $color-crema;
+    @include transicion(all);
+
+    &:hover {
+      border-color: $color-horneado;
+    }
+
+    &:focus {
+      border-color: $color-horneado;
+      box-shadow: 0 0 0 .25rem rgba($color-horneado, .35);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Ilustración de un sanguche de jamón y queso">
+<title>Ilustración de un sanguche de jamón y queso</title>
+<rect width="800" height="600" fill="#FFF1CC"/>
+<circle cx="656.0" cy="90.0" r="170" fill="#F6B82E" opacity=".45"/>
+<circle cx="80.0" cy="552.0" r="140" fill="#EBB458" opacity=".5"/>
+<ellipse cx="400.0" cy="457.0" rx="285.2" ry="22" fill="#2B1B0A" opacity=".12"/>
+<ellipse cx="400.0" cy="447.0" rx="276.0" ry="24" fill="#FFFFFF" stroke="#EBD9A8" stroke-width="3"/>
+<rect x="170" y="382.28" width="460" height="60.720000000000006" rx="14" fill="#FBE6B8" stroke="#D79A33" stroke-width="5"/>
+<rect x="164" y="351.91999999999996" width="472" height="32.89000000000001" rx="6" fill="#F7D874" stroke="#E0B63E" stroke-width="3"/>
+<path d="M160 316.49999999999994 q46.0 -14 92.0 0 t92.0 0 t92.0 0 t92.0 0 t112.0 0 v25.300000000000004 h-480 z" fill="#E99AA0" stroke="#D77A84" stroke-width="3"/>
+<path d="M160 334.2099999999999 q46.0 -14 92.0 0 t92.0 0 t92.0 0 t92.0 0 t112.0 0 v25.300000000000004 h-480 z" fill="#E99AA0" stroke="#D77A84" stroke-width="3"/>
+<rect x="170" y="200.12" width="460" height="66.79200000000002" rx="14" fill="#FBE6B8" stroke="#D79A33" stroke-width="5"/>
+<path d="M188 227.44400000000002 h161.0" stroke="#F3D79A" stroke-width="6" stroke-linecap="round"/>
+</svg>

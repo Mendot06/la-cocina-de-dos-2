@@ -1,0 +1,72 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/placeholders";
+
+// Hero del inicio: CSS Grid con áreas nombradas, mobile-first
+.hero {
+  @include gradiente-animado($color-miel, $color-ambar, $color-caramelo, 14s);
+  @include seccion($espacio-lg);
+
+  &__grilla {
+    display: grid;
+    gap: $espacio-md;
+    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "titulo" "imagen" "texto" "acciones";
+
+    @include respond-up($bp-desktop) {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+      grid-template-areas: "titulo imagen" "texto imagen" "acciones imagen";
+      column-gap: $espacio-lg;
+    }
+  }
+
+  &__titulo {
+    grid-area: titulo;
+    margin: 0;
+  }
+
+  &__texto {
+    grid-area: texto;
+    margin: 0;
+  }
+
+  &__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $espacio-sm;
+    grid-area: acciones;
+  }
+
+  &__imagen {
+    grid-area: imagen;
+    width: 100%;
+    max-width: 32rem;
+    margin: 0 auto;
+
+    img {
+      @extend %imagen-fluida;
+      border: 4px solid $color-cacao;
+      border-radius: $radio-borde;
+      box-shadow: $sombra-fuerte;
+      animation: flotar 6s ease-in-out infinite;
+    }
+  }
+
+  @include respond-up($bp-desktop) {
+    @include seccion($espacio-xl);
+  }
+}
+
+.banda-cta {
+  @include gradiente-animado($color-horneado, $color-caramelo, $color-miel, 12s);
+  @include seccion($espacio-lg);
+  text-align: center;
+
+  p {
+    max-width: 38rem;
+    margin-inline: auto;
+    margin-bottom: $espacio-md;
+    font-size: 1.1rem;
+  }
+}

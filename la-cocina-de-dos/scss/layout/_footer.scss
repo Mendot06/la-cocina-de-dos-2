@@ -1,0 +1,65 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/placeholders";
+
+.pie {
+  @include seccion($espacio-lg);
+  background-color: $color-cacao;
+  color: $color-crema;
+
+  &__grilla {
+    display: grid;
+    gap: $espacio-md;
+    grid-template-columns: minmax(0, 1fr);
+
+    @include respond-up($bp-tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include respond-up($bp-desktop) {
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: $espacio-lg;
+    }
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    color: $color-miel;
+  }
+
+  ul {
+    @extend %reset-lista;
+  }
+
+  li {
+    margin-bottom: $espacio-xs;
+  }
+
+  a {
+    &:link,
+    &:visited {
+      color: $color-miel;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-crema;
+    }
+
+    &:focus-visible {
+      outline-color: $color-miel;
+    }
+
+    &:active {
+      color: $color-ambar;
+    }
+  }
+
+  &__legal {
+    margin-top: $espacio-lg;
+    padding-top: $espacio-sm;
+    border-top: 1px solid rgba($color-crema, .3);
+    font-size: .9rem;
+    text-align: center;
+  }
+}

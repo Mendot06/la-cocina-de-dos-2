@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.btn-cocina {
+  @include boton-variante($color-horneado);
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: $color-cacao;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $color-cacao;
+    outline-offset: 3px;
+  }
+
+  &--secundario {
+    @include boton-variante(transparent, $color-cacao, $color-ambar);
+  }
+
+  &--claro {
+    @include boton-variante($color-crema, $color-cacao, $color-miel);
+  }
+}
+
+.boton-flotante {
+  position: fixed;
+  right: $espacio-sm;
+  bottom: $espacio-sm;
+  z-index: 1030;
+  @include boton-variante($color-horneado);
+  box-shadow: $sombra-fuerte;
+  animation: pulso 2.5s ease-in-out infinite;
+
+  &:link,
+  &:visited {
+    color: $color-cacao;
+    text-decoration: none;
+  }
+}
